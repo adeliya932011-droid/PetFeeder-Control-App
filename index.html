@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление кормушкой для питомцев</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐾 Кормушка для питомцев</h1>
+        <p>Подключитесь к WiFi: <strong>PetFeeder</strong> (пароль: 12345678). IP сервера: 192.168.4.1</p>
+        
+        <div class="status">
+            <p id="status">Статус: Готово</p>
+        </div>
+        
+        <div class="buttons">
+            <button id="feedBtn" onclick="sendCommand('feed')">🍖 Кормить (корм + вода)</button>
+            <button id="foodBtn" onclick="sendCommand('food')">🍗 Только корм</button>
+            <button id="waterBtn" onclick="sendCommand('water')">💧 Только вода</button>
+        </div>
+        
+        <div class="log">
+            <h3>Лог действий:</h3>
+            <ul id="logList"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
